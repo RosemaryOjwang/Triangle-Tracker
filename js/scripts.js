@@ -1,6 +1,6 @@
 //Business Logic
 function equilateralTriangle()  {
-    document.getElementById("result").innerText = "Equlateral";
+   console.log(document.getElementById("result").innerText = "Equilateral");
     document.getElementById("triangle").style.display = "block";
 }
 function notTriangle()  {
@@ -42,8 +42,8 @@ let side2 = document.getElementById("side2").value;
 console.log(side2);
 let side3 = document.getElementById("side3").value;
 console.log(side3);
-let result = trackTriangle(side1, side2, side3);
-document.getElementById("result").innerText = result;
+trackTriangle(side1, side2, side3);
+//document.getElementById("result").innerText = results;
 
 }
 
