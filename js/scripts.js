@@ -18,16 +18,16 @@ function isoscelesTriangle()   {
 }
 
 function trackTriangle(a, b, c)    {
-    //get values of the sides
     
-    if (a + b <= c && b + c <= a && a + c <= b)    {
-         notTriangle();
-    }else  {
+    if ((a + b <= c) || (b + c <= a) || (a + c <= b))    {
+        notTriangle();
+        
+    } else                                                                                                                                                                                                                                                    {
         if (a === b && b ===c)    {
             equilateralTriangle();
-        } else if (a === b || b === c || c === a)   {
+        } else if ((a === b) || (b === c) || (c === a))   {
             isoscelesTriangle();
-        } else {
+        } else if ((a !== b) && (a !== c) && (b!==c)) {
             scaleneTriangle();      
        }
     } 
