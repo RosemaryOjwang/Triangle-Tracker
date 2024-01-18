@@ -9,28 +9,30 @@ function notTriangle()  {
 
 }
 function scaleneTriangle()   {
-    document.getElementById("result").innerText = "Scalene Triangle";
+    document.getElementById("result").innerText = "Scalene";
     document.getElementById("triangle").style.display = "block";
 }
 function isoscelesTriangle()   {
-    document.getElementById("result").innerText = "Isosceles Triangle";
+    document.getElementById("result").innerText = "Isosceles";
     document.getElementById("triangle").style.display = "block";
 }
 
 function trackTriangle(a, b, c)    {
     //get values of the sides
     
-    if (a < c && b < c && a + b < c)    {
-        "Not a triangle";
-    } else if (a === b && a === c)  {
-        equilateralTriangle();
-    } else if (a === b || a === c || b === c) {
-        isoscelesTriangle();
-    } else if (a !== b && b !== c  && a !== c)  {
-        scaleneTriangle();
-
-    }
+    if (a + b <= c && b + c <= a && a + c <= b)    {
+         notTriangle();
+    }else  {
+        if (a === b && b ===c)    {
+            equilateralTriangle();
+        } else if (a === b || b === c || c === a)   {
+            isoscelesTriangle();
+        } else {
+            scaleneTriangle();      
+       }
+    } 
 }
+
 
 
 //User Interface
@@ -43,7 +45,6 @@ console.log(side2);
 let side3 = document.getElementById("side3").value;
 console.log(side3);
 trackTriangle(side1, side2, side3);
-//document.getElementById("result").innerText = results;
 
 }
 
