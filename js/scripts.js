@@ -18,20 +18,34 @@ function isoscelesTriangle()   {
 }
 
 function trackTriangle(a, b, c)    {
-    
-    if ((a + b <= c) || (b + c <= a) || (a + c <= b))    {
+    if (a + b <= c && b + c <= a && a + c <= b)    {
         notTriangle();
-        
-    } else                                                                                                                                                                                                                                                    {
-        if (a === b && b ===c)    {
-            equilateralTriangle();
-        } else if ((a === b) || (b === c) || (c === a))   {
-            isoscelesTriangle();
-        } else if ((a !== b) && (a !== c) && (b!==c)) {
-            scaleneTriangle();      
-       }
-    } 
+   }else  {
+       if (a === b && b ===c)    {
+           equilateralTriangle();
+       } else if (a === b || b === c || c === a)   {
+           isoscelesTriangle();
+       } else {
+           scaleneTriangle();      
+      }
+   } 
 }
+
+    
+   // if ((a + b <= c) || (b + c <= a) || (a + c <= b))    {
+     //   notTriangle();
+       // 
+    //} else {                                                                                                                                                                                                                                                   {
+      //  if (a === b && b ===c)    {
+        //    equilateralTriangle();
+        //} else if ((a === b) || (b === c) || (c === a))   {
+          //  isoscelesTriangle();
+        //} else
+          //  scaleneTriangle();      
+        //} 
+   //}
+
+//}
 
 
 
